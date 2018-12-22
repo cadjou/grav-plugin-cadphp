@@ -1,0 +1,13 @@
+---
+PLUGIN_CADPHP:
+  PATH_TO_PHP_1: "Path allow <code>cadphp:p1:Path_in_PHP_Folder</code>"
+  PATH_TO_PHP_2: "Path allow <code>cadphp:p2:Path_in_PHP_Folder</code>"
+  PATH_TO_PHP_3: "Path allow <code>cadphp:p3:Path_in_PHP_Folder</code>"
+  PATH_TO_PHP_4: "Path allow <code>cadphp:p4:Path_in_PHP_Folder</code>"
+  PATH_TO_PHP_5: "Path allow <code>cadphp:p5:Path_in_PHP_Folder</code>"
+  PATH_FOLDER: "Path to PHP folder"
+  FUNCTION_DENY: "List of the <b>Deny PHP Function</b>"
+  FUNCTION_DENY_INFO: "The PHP code will be not executed if these is one of this function in it."
+  SECTION_PATH: Path Setting
+  TEXT_PATH: "Start by <b>/</b> mean <i>Document Root</i> or else it's in the CadPHP Plugin Path <b>/user/plugins/cadphp/</b>"
+  SECTION_ADVENCE: Advanced settings

@@ -1,0 +1,86 @@
+name: Cadphp
+version: 1.0
+description: Include PHP simply inside Grav CMS
+icon: plug
+author:
+  name: CaDJoU
+  email: cadjou@gmail.com
+homepage: https://github.com/cadjou/grav-plugin-cadphp
+keywords: grav, php, plugin, markdown
+bugs: https://github.com/cadjou/grav-plugin-cadphp/issues
+docs: https://github.com/cadjou/grav-plugin-cadphp/blob/master/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    Basics:
+      type: section
+      title: PLUGIN_CADPHP.SECTION_PATH
+      text: PLUGIN_CADPHP.TEXT_PATH
+      underline: false
+    p1:
+      type: textaera
+      label: PLUGIN_CADPHP.PATH_TO_PHP_1
+      default: "php/"
+      placeholder: PLUGIN_CADPHP.PATH_FOLDER
+    p2:
+      type: textaera
+      label: PLUGIN_CADPHP.PATH_TO_PHP_2
+      placeholder: PLUGIN_CADPHP.PATH_FOLDER
+    p3:
+      type: textaera
+      label: PLUGIN_CADPHP.PATH_TO_PHP_3
+      placeholder: PLUGIN_CADPHP.PATH_FOLDER
+    p4:
+      type: textaera
+      label: PLUGIN_CADPHP.PATH_TO_PHP_4
+      placeholder: PLUGIN_CADPHP.PATH_FOLDER
+    p5:
+      type: textaera
+      label: PLUGIN_CADPHP.PATH_TO_PHP_5
+      placeholder: PLUGIN_CADPHP.PATH_FOLDER
+    Advence:
+      type: section
+      title: PLUGIN_CADPHP.SECTION_ADVENCE
+      underline: false
+    functions_deny:
+      type: select
+      multiple: true
+      label: PLUGIN_CADPHP.FUNCTION_DENY
+      classes: fancy
+      description: PLUGIN_CADPHP.FUNCTION_DENY_INFO
+      default:
+        - allow_url_fopen  
+        - allow_url_include
+        - exec
+        - shell_exec
+        - system
+        - passthru
+        - popen
+        - stream_select
+        - ini_set
+      options:
+        - allow_url_fopen  
+        - allow_url_include
+        - exec
+        - shell_exec
+        - system
+        - passthru
+        - popen
+        - stream_select
+        - ini_set
+      selectize:
+        create: true
+      validate:
+        type: commalist

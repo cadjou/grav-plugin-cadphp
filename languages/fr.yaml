@@ -1,0 +1,13 @@
+---
+PLUGIN_CADPHP:
+  PATH_TO_PHP_1: "Chemin possible : <code>cadphp:p1:Chemin_dans_Dossier_PHP</code>"
+  PATH_TO_PHP_2: "Chemin possible : <code>cadphp:p2:Chemin_dans_Dossier_PHP</code>"
+  PATH_TO_PHP_3: "Chemin possible : <code>cadphp:p3:Chemin_dans_Dossier_PHP</code>"
+  PATH_TO_PHP_4: "Chemin possible : <code>cadphp:p4:Chemin_dans_Dossier_PHP</code>"
+  PATH_TO_PHP_5: "Chemin possible : <code>cadphp:p5:Chemin_dans_Dossier_PHP</code>"
+  PATH_FOLDER: "Chemin vers le Dossier PHP"
+  FUNCTION_DENY: "Liste des fonctions PHP interdites"
+  FUNCTION_DENY_INFO: "Le code PHP ne sera pas executé si l'une de ces fonctions est présente."
+  SECTION_PATH: "Configuration des Chemins"
+  TEXT_PATH: "Si commence par un <b>/</b> alors cela repésente <i>Document Root</i> sinon c'est le chemin du plugin cadPHP <b>/user/plugins/cadphp/</b>"
+  SECTION_ADVENCE: "Configuration avancée"
