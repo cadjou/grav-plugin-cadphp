@@ -117,7 +117,7 @@ class Cadphp
 			$out = ob_get_contents();
 		ob_end_clean();
 
-		if ($out);
+		if ($out)
 		{
 			$this->gravLog->warning('CadPHP => The PHP code had a erreur : ' . $path);
 			return false;
