@@ -6,7 +6,12 @@ Include PHP simply inside Grav CMS
 ## Installation
 
 ### By Grav Package Manager (GPM)
-Coming Soon
+
+Easy way to install with GPM.
+
+```
+$ bin/gpm install cadphp
+```
 
 ### Manualy
 
@@ -28,10 +33,10 @@ To finish, you have to set the relative path to the predefined path **pX** witho
 By default, p1 is set to point to the folder **/user/plugins/cadphp/php/**
 ```
 cadphp:p1:test // Run /user/plugins/cadphp/php/test.php
-cadphp:p2:chemin_du_fichier
-cadphp:p3:chemin_du_fichier
-cadphp:p4:chemin_du_fichier
-cadphp:p5:chemin_du_fichier
+cadphp:p2:path_dir_php_files
+cadphp:p3:path_dir_php_files
+cadphp:p4:path_dir_php_files
+cadphp:p5:path_dir_php_files
 ```
 
 #### PHP Limitation
@@ -81,7 +86,6 @@ In case of error in the PHP code, it will not be executed and the error is logge
 ## In Development
 
 - Add a predefined path via the web interface
-- Add Comments in the code
 - Put more information in the error message
 
 ---
@@ -92,7 +96,11 @@ In case of error in the PHP code, it will not be executed and the error is logge
 
 ### Via Grav Package Manager (GPM)
 
-En cours d'implémentation
+Commande pour installer CadPHP avec GPM.
+
+```
+$ bin/gpm install cadphp
+```
 
 ### Manuellement
 
@@ -105,7 +113,7 @@ Et renommer le plugin **grav-plugin-cadphp-master** en **cadphp**
 ## Utilisation
 Pour exécuter un fichier PHP, il faut placer le mot-clé <code>cadphp:</code> en début de ligne dans le contenu d'une page Grav.
 
-Ensuite, il faut indiquer le chemin pré-paramétré **pX** où **X** est compris entre *1 et 99*.<br>
+Ensuite, il faut indiquer le chemin pré-paramétré **pX** où **X** est compris entre *1 et 99*.
 *Plus d'informations dans la partie paramétrage.*
 
 Pour terminer, il faut mettre le chemin relatif par rapport au chemin prédéfini **pX** sans l'extension *.php*
@@ -138,8 +146,7 @@ Dans l'interface d'administration, plusieurs options sont possibles.
 
 ### Configuration des localisations des fichiers PHP
 
-Depuis l'interface web, il est possible de définir 5 chemins paramétrables.<br>
-Le 1er par défaut est le dossier **/user/plugins/cadphp/php/** et le 2ème est le dossier est **/user/plugins/page/**
+Depuis l'interface web, il est possible de définir 5 chemins paramétrables. Le 1er par défaut est le dossier **/user/plugins/cadphp/php/** et le 2ème est le dossier est **/user/plugins/page/**
 
 Si le chemin commence par un <b>/</b> alors cela repésente <i>Document Root</i> sinon c'est le chemin du plugin cadPHP <b>/user/plugins/cadphp/</b>
 
@@ -158,7 +165,7 @@ Pour sécuriser le code executé, certaines fonctions PHP sont interdites.<br>Pa
 - stream_select
 - ini_set
 
-**A vos risques et périls** ;) .
+**A vos risques et périls** si vous en envelez certaines ;) .
 
 ## Erreurs
 
@@ -167,6 +174,4 @@ En cas d'erreur dans le code PHP, il ne sera pas executé et l'erreur est loggé
 ## En cours de développement
 
 - Ajouter un chemin prédéfinit via l'interface web
-- Traduire le Readme en Anglais
-- Commenter le code
 - Mettre plus d'informations dans le Erreur
