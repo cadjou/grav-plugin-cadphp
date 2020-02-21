@@ -1,5 +1,5 @@
 name: Cadphp
-version: 1.0.2
+version: 1.0
 description: Include PHP simply inside Grav CMS
 icon: plug
 author:
@@ -10,6 +10,9 @@ keywords: grav, php, plugin, markdown
 bugs: https://github.com/cadjou/grav-plugin-cadphp/issues
 docs: https://github.com/cadjou/grav-plugin-cadphp/blob/master/README.md
 license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
 
 form:
   validation: strict

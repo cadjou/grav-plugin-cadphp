@@ -1,14 +1,23 @@
-# v1.0.2
-## 21/01/2019
+# v2.0
+## 20/02/2020
 
-1. [Change](#Change)
-    * Add comment to Cadphp class
-	* Remove Variables Type for PHP 5.6.4 compatibily Issue #1
-	
-
-# v1.0.1
+1. [](#new)
+    * In Grav\Plugin\Cadphp
+		* Add processForm 
+		* Add processData
+	* In Grav\Plugin\CadphpPlugin
+		* Add onFormProcessed 
+		* Add dataProcess
+2. [](#improved)
+	* In Grav\Plugin\Cadphp 
+		* Change process to processContent  
+		* improvement safeEval
+	* In Grav\Plugin\CadphpPlugin
+		* Change process to processContent
+		
+# v1.0
 ## 23/12/2018
 
-1. [New](#new)
+1. [](#new)
     * Creation of the App
 	 
