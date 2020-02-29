@@ -29,7 +29,7 @@ Next, indicate the path parameterized **pX** where **X** is between 1 and 99<br>
 To finish, you have to set the relative path to the predefined path **pX** without the extension *.php*
 
 By default, p1 is set to point to the folder **/user/plugins/cadphp/php/**
-```
+```yaml
 cadphp:p1:test // Run /user/plugins/cadphp/php/test.php
 cadphp:p2:chemin_du_fichier
 cadphp:p3:chemin_du_fichier
@@ -44,7 +44,7 @@ The <code>?></code> closure is not mandatory but it must be unique and at the en
 
 The file must return a string as in this example:
 */cadphp/php/test.php*
-```
+```php
 <?php
 return "Hello the World";
 ```
@@ -123,7 +123,7 @@ Pour terminer, il faut mettre le chemin relatif par rapport au chemin prédéfin
 
 Par défaut, **p1** est défini pour pointer vers le dossier **/user/plugins/cadphp/php/**
 
-```
+```yaml
 cadphp:p1:test // Execute /user/plugins/cadphp/php/test.php (Retour "Hello the word")
 cadphp:p2:chemin_du_fichier
 cadphp:p3:chemin_du_fichier
@@ -134,7 +134,7 @@ cadphp:p5:chemin_du_fichier
 ### Depuis l'entête d'un page
 
 Dans l'entête d'une page, vous pouvez ajouter un tableau comme la exemple ci-dessous :
-```
+```yaml
 ---
 title: 'Page with Forms'
 cadphp:
@@ -155,7 +155,7 @@ Dans cette exemple **_cadphp.resultatPhpExe** affichera *Hello the word*
 
 De la même manière que dans l'entête, il est possible de place le tableau dans le process d'un formulaire comme ci-dessous qui sera executé que si le formulaire est validé:
 
-```
+```yaml
 ---
 title: 'formulaire de test'
 form:
@@ -174,7 +174,7 @@ Une autre manière d'appeler le code PHP, est d'utiliser la méthode statique \G
 
 Et il faut lui passer en paramètre le code à executer comme l'exemple ci-dessous :
 
-```
+```yaml
 ---
 title: 'formulaire de test'
 form:
@@ -199,7 +199,7 @@ La fermeture <code>?></code> n'est pas obligatoire mais il doit être unique et 
 
 Le fichier doit retourne une chaine de caractères comme dans cette exemple :<br>
 */cadphp/php/test.php*
-```
+```php
 <?php
 return "Hello the World";
 ```

@@ -108,11 +108,6 @@ class Cadphp
 		return null;
 	}
 	
-	public function process(String $content)
-	{		
-		return $this->processContent($content);
-	}
-	
 	public function processContent(String $content, $cadPHPHeader = null)
 	{
 		if ($cadPHPHeader)
@@ -163,7 +158,7 @@ class Cadphp
 	
 	public function processData($data)
 	{
-		print_r('coucou');
+        // print_r($data);
 		$config	= $this->configPlugin;
 		$retour = null;
 		$data = is_array($data) ? $data : [$data];
@@ -176,7 +171,7 @@ class Cadphp
 			and !empty($results[0][1]) 
 			and !empty($results[0][2]))
 			{
-				print_r($results);
+				// print_r($results);
 				$p			 = rtrim($config[$results[0][1]],'/');
 				$identifiant = $results[0][0];
 				$racin		 = substr($p,0,1) == '/' ? $this->docRoot : $this->pathPlugin;

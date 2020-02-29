@@ -1,7 +1,7 @@
 name: Cadphp
-version: 2.0.1
+version: 2.0.2
 description: Include PHP simply inside Grav CMS
-icon: plug
+icon: php
 author:
   name: CaDJoU
   email: cadjou@gmail.com

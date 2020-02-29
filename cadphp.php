@@ -50,6 +50,23 @@ class CadphpPlugin extends Plugin
 		$e['page']->setRawContent($content);
     }
 	
+	public function isRequestJson()
+    {
+		$grav = Grav::instance();
+        $request  = $grav['request'];
+		foreach(explode(',',$request->getServerParams()['HTTP_ACCEPT']) as $accept)
+		{
+			// echo '*******';
+			// print_r($accept);
+			// echo '*******' . "\n";
+			$accept = trim($accept);
+			if ($accept == 'application/json')
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 	
     public function onFormProcessed(Event $event)
     {
@@ -64,15 +81,22 @@ class CadphpPlugin extends Plugin
 
 		$twig	= $this->grav['twig'];
 		$Cadphp = new Cadphp($this->grav, $this->config());
-		
 		foreach($Cadphp->processForm($params,$form->getValue('data')) as $key=>$data)
 		{
 			$twig->twig_vars['cadphp'][$key] = $data;
+		}
+		if ($this->isRequestJson())
+		{
+			// Return JSON
+			header('Content-Type: application/json');
+			echo json_encode($twig->twig_vars['cadphp']);
+			exit;	
 		}
     }
 	
 	public static function dataProcess($data = [])
     {
+        // print_r($data);
 		$Grav = Grav::instance();
 		$Cadphp  = new Cadphp($Grav, $Grav['config']->get('plugins.cadphp'));
 		return $Cadphp->processData($data);
