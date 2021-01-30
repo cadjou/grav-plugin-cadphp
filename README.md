@@ -21,6 +21,14 @@ Copy the Pack in the folder Site-Grav/user/plugins/
 
 And rename the plugin folder **grav-plugin-cadphp-master** to **cadphp**
 
+### After installation
+
+Save the parameters in the plugin interface if you have admin interface or copy the file cadphp.yaml in /user/config/plugins/cadphp.yml with this minimum :
+```
+enabled: true
+p1: php/
+```
+
 ## Use
 
 To run a PHP file, you have to place the Keyword <code>cadphp:</code> at the beginning of the line in the content of a Grav page.
@@ -109,6 +117,14 @@ Télécharger le plugin : https://github.com/cadjou/grav-plugin-cadphp/archive/m
 Copier le Pack dans le dossier Site-Grav/user/plugins/
 
 Et renommer le plugin **grav-plugin-cadphp-master** en **cadphp**
+
+### Après l'installation
+
+Enregistrez les paramètres dans l’interface du plugin si vous avez une interface admin ou copiez le fichier cadphp.yaml dans /user/config/plugins/cadphp.yml avec au minimum :
+```
+enabled: true
+p1: php/
+```
 
 ## Utilisation
 Pour exécuter un fichier PHP, il faut placer le mot-clé <code>cadphp:</code> en début de ligne dans le contenu d'une page Grav.
